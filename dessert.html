@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Desserts</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+@font-face {
+    font-family: myFont;
+    src: url("fonts/Tropi\ Land\ -\ \(Demo\)\ hanscostudio.com.ttf");
+  }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #ffcaea;
+  padding: 20px;
+  text-align: center;
+  font-family: myFont;
+  font-size: 3.5em;
+  color: #954462;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Background image style */
+body {
+  background-image: url("images/dessertsbg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Make the body take the full viewport height */
+}
+
+div.polaroid {
+  width: 15%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 100px;
+  justify-content: center;
+ 
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+  
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Allows images to wrap into rows */
+    justify-content: center; /* Centers the content */
+    gap: 20px; /* Adds space between images */
+  }
+
+  .back-home {
+    position: absolute;
+    top: 0px;
+    left: 27px;
+    margin: 10px;
+    background-color: #ecbcd8;
+    border-color: #ffc6cf;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+   color: #333;
+  }
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>My Favourite Deserts</h1>
+      </div>
+      
+    <header>
+          <a href="biodata.html" class="back-home">Back</a>
+    </header>
+
+
+<div class="row">
+
+<div class="polaroid">
+  <img src="images/banana.jpg" alt="Banana Cake" style="width:100%">
+  <div class="container">
+  <p>Banana Cake</p>
+  </div>
+</div>
+
+<div class="polaroid">
+  <img src="images/cheesecake.jpg" alt="Burnt Cheesecake" style="width:100%">
+  <div class="container">
+  <p>Burnt Cheesecake</p>
+  </div>
+</div>
+
+<div class="polaroid">
+    <img src="images/pudding.jpg" alt="Pudding Caramel" style="width:100%">
+    <div class="container">
+    <p>Pudding Caramel</p>
+    </div>
+  </div>
+
+  <div class="polaroid">
+    <img src="images/red velvet.jpg" alt="Red Velvet Cake" style="width:100%">
+    <div class="container">
+    <p>Red Velvet Cake</p>
+    </div>
+  </div>
+
+  <div class="polaroid">
+    <img src="images/tiramisu.jpg" alt="Tiramisu" style="width:100%">
+    <div class="container">
+    <p>Tiramisu</p>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

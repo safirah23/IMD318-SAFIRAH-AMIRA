@@ -1,0 +1,442 @@
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f1bbd7;
+  background-image: url("images/home.jpg"); 
+}
+
+
+  
+@font-face {
+  font-family: myFont;
+  src: url("fonts/Winkle-Regular.ttf");
+}
+
+@font-face {
+  font-family: secFont;
+  src: url("fonts/TT\ Interphases\ Pro\ Trial\ Bold.ttf");
+}
+
+/* Header/Blog Title */
+header {
+  width: 100vw;
+  height: 60vh; /* Adjust height as needed */
+  margin: 0 auto;
+  background-image: url("images/header.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 40px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
+.h2 {
+  font-family: secFont;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: rgb(205, 83, 117);
+  text-align: center;
+}
+
+.container {
+  
+  padding-top: 40px;
+  padding-bottom: 40px;
+  overflow: hidden;
+}
+
+.marquee-items {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.marquee {
+  display: flex;
+  width: 200%;
+  animation: marqueeSlide 20s linear infinite;
+}
+
+@keyframes marqueeSlide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+p {
+  color: white;
+  font-size: 30px;
+}
+
+header h1 {
+  color: #f1bbd7;
+  font-family: myFont;
+  font-size: 5.5em;
+}
+
+header h2 {
+  color: #f1bbd7;
+  font-family: myFont;
+  font-size: 4.5em; /* Adjust size as needed */
+  margin-top: -10px; /* Adjust spacing between h1 and h2 */
+}
+.topnav {
+  background-color: #fad0e6;
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: 100vw;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: rgb(194, 59, 98);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+
+
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px;
+}
+
+
+
+.leftcolumn {
+  width: 73%;
+  margin-left: 5px;
+}
+
+.rightcolumn {
+  width: 25%;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  gap: 5px;
+}
+
+/*CHECKLIST CODE*/
+
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: none;
+  font-size: 18px;
+  transition: 0.2s;
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background:  rgb(236, 155, 178);
+  color: #824d4d;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f857b5e2;
+  color: rgb(78, 42, 42);
+}
+
+/* Style the header */
+.header {
+ 
+  background-image: url("images/todolist.jpg");
+  padding: 30px 40px;
+  color: rgb(194, 59, 98);
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: rgb(236, 155, 178);;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #fddce6;
+}
+
+
+/* Footer Styling */
+.footer {
+  position: relative;
+  width: 100%;
+  background: #ebaec9;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+  mix-blend-mode: multiply;
+  background: none;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: none;
+  background: none;
+  color: #e97084;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  background: none;
+  mix-blend-mode: multiply;
+}
+
+.social-icon__link:hover {
+  text-decoration: none; /* Optional: Keep the appearance clean on hover */
+  box-shadow: none; /* Removes shadow on hover */
+  background: none; 
+  transform: translateY(-10px);
+  mix-blend-mode: multiply;
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #871313e0;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 0.5;
+}
+
+.footer p {
+  color: #a04444;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

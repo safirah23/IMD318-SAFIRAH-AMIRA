@@ -1,0 +1,321 @@
+
+/* Family css*/
+
+* 
+  body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    background: #f9f9f9;
+    background-image: url("images/lovepinkwall.jpg"); /* Path to your GIF */
+  }
+
+  @font-face {
+    font-family: myFont;
+    src: url("fonts/Tropi Land - (Demo) hanscostudio.com.ttf");
+  }
+  @font-face {
+    font-family: secFont;
+    src: url("fonts/Yaelah.ttf");
+  }
+
+  /* Header */
+  header {
+    width: 97vw;
+    height: 60vh;
+    background-image: url("images/familyheader.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .back-home {
+    position: absolute;
+    top: 0px;
+    left: 27px;
+    margin: 10px;
+    background-color: #ecbcd8;
+    border-color: #ecbcd8;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+  }
+
+ 
+
+  .dropdown {
+    display: inline-block;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+
+  }
+  
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 51px; /* Offset slightly below the dropdown button */
+  left: 5px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(255, 252, 252, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+
+  }
+  
+  .dropdown-content a {
+    color: rgb(226, 156, 200);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+
+  .row {
+    display: flex;
+    flex-wrap: wrap; /* Allows images to wrap into rows */
+    justify-content: center; /* Centers the content */
+    margin: 0;
+    gap: 0;
+  }
+  
+  .container {
+    
+    position: relative;
+    width: 220px; /* Three images per row with spacing */
+    max-width: 300px; /* Optional: limits the maximum size */
+    padding: 0;
+    margin: 5px;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+    
+  }
+  
+  .overlay {
+    position: absolute; 
+    bottom: 0; 
+    background: rgba(126, 68, 68, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 81.6%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+
+
+  /* Footer Styling */
+  .footer {
+    position: relative;
+    width: 100%;
+    background: #ebaec9;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .social-icon,
+  .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    mix-blend-mode: multiply;
+    background: none;
+  }
+  
+  .social-icon__item,
+  .menu__item {
+    list-style: none;
+  }
+  
+  .social-icon__link {
+    font-size: 2rem;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: none;
+    background: none;
+    color: #e97084;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    background: none;
+    mix-blend-mode: multiply;
+  }
+  
+  .social-icon__link:hover {
+    text-decoration: none; /* Optional: Keep the appearance clean on hover */
+    box-shadow: none; /* Removes shadow on hover */
+    background: none; 
+    transform: translateY(-10px);
+    mix-blend-mode: multiply;
+  }
+  
+  .menu__link {
+    font-size: 1.2rem;
+    color: #871313e0;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+  }
+  
+  .menu__link:hover {
+    opacity: 0.5;
+  }
+  
+  .footer p {
+    color: #a04444;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  
+  .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("https://i.ibb.co/wQZVxxk/wave.png");
+    background-size: 1000px 100px;
+  }
+  
+  .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWaves 4s linear infinite;
+  }
+  
+  .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate 4s linear infinite !important;
+  }
+  
+ 
+  
+  @keyframes animateWaves {
+    0% {
+      background-position-x: 1000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position-x: -1000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
