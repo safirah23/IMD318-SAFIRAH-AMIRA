@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url("iexplore.gif") no-repeat center center/cover; /* Add your image */
+    background: url("explore.gif") no-repeat center center/cover; /* Add your image */
     color: #ffffff;
 }
 
