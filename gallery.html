@@ -9,7 +9,7 @@
 
 body {
   background-image: url("images/lovmotion.gif"); 
-  padding: 20px;
+  padding: 5px;
   font-family: Arial;
 }
 
@@ -31,7 +31,6 @@ header {
   background-image: url("images/header.jpg");
   background-size: cover;
   background-position: center;
-  padding: 40px 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,21 +63,57 @@ header h2 {
   font-size: 4.5em; /* Adjust size as needed */
   margin-top: -10px; /* Adjust spacing between h1 and h2 */
 }
-.topnav {
-  background-color: #fad0e6;
-  overflow: hidden;
-  margin-bottom: 20px;
-  width: 100vw;
+
+
+.back-home {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  margin: 10px;
+  background-color: #ecbcd8;
+  border-color: #ecbcd8;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1em;
+  border-radius: 5px;
 }
 
-.topnav a {
-  float: left;
-  display: block;
-  color: rgb(194, 59, 98);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+
+
+.dropdown {
+  display: inline-block;
+color: #fff;
+padding: 10px 20px;
+font-size: 1em;
+border-radius: 5px;
+cursor: pointer;
+
 }
+
+.dropdown-content {
+display: none;
+position: absolute;
+top: 51px; /* Offset slightly below the dropdown button */
+left: 5px;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(255, 252, 252, 0.2);
+z-index: 1;
+border-radius: 5px;
+
+}
+
+.dropdown-content a {
+  color: rgb(249, 246, 246);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
 
   
 
@@ -103,6 +138,7 @@ h1 {
   width: 23.23%; 
   display: none; /* Hide all elements by default */
   margin-left: 20px;
+  
 }
 
 /* Clear floats after rows */ 
@@ -114,7 +150,7 @@ h1 {
 
 /* Content */
 .content {
-  background-color: white;
+  background-color: #f3c6da;
   padding: 10px;
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -126,7 +162,7 @@ h1 {
 }
 
 img {
-  border: 1px solid #ddd;
+  border: 1px solid #f3c6da;
   border-radius: 4px;
   padding: 5px;
   width: 150px;
@@ -141,8 +177,9 @@ img:hover {
   border: none;
   outline: none;
   padding: 12px 16px;
-  background-color: white;
+  background-color: #f3c6da;
   cursor: pointer;
+ margin-top: 20px;
 }
 
 .btn:hover {
@@ -152,6 +189,7 @@ img:hover {
 .btn.active {
   background-color: #666;
   color: white;
+  margin-left: 20px;
 }
 
  /* visited link */
@@ -169,6 +207,125 @@ img:hover {
     color: rgb(62, 65, 63);
   }
 
+  /* Footer Styling */
+.footer {
+  position: relative;
+  width: 100%;
+  background: #ebaec9;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+  mix-blend-mode: multiply;
+  background: none;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: none;
+  background: none;
+  color: #e97084;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  background: none;
+  mix-blend-mode: multiply;
+}
+
+.social-icon__link:hover {
+  text-decoration: none; /* Optional: Keep the appearance clean on hover */
+  box-shadow: none; /* Removes shadow on hover */
+  background: none; 
+  transform: translateY(-10px);
+  mix-blend-mode: multiply;
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #871313e0;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 0.5;
+}
+
+.footer p {
+  color: #a04444;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -177,22 +334,20 @@ img:hover {
 
 
 <header>
-<h1>Safirah's</h1>
-<h2>Gallery</h2>
+  <h1>Safirah's</h1>
+  <h2>Gallery</h2>
+  <div class="dropdown">
+    <button class="back-home">Menu</button>
+    <div class="dropdown-content">
+      <a href="home.html">Home</a>
+      <a href="biodata.html">Biodata</a>
+      <a href="family.html">Family</a>
+      <a href="education.html">Education</a>
+      <a href="experience.html">Experience</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+  </div>  
 </header>
-
-
-<div class="topnav">
-<a href="home.html">Home</a>
-<a href="biodata.html">Biodata</a>
-<a href="family.html">Family</a>
-<a href="education.html">Education</a>
-<a href="experience.html">Experience</a>
-<a href="gallery.html">Gallery</a>
-
-
-</div>
-      
     
 
 
@@ -471,6 +626,37 @@ img:hover {
 <!-- END MAIN -->
 </div>
 
+<!-- Footer -->
+
+<div class="footer">
+  <div class="waves">
+  </div>
+  <ul class="social-icon">
+    <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/pira.si.9?mibextid=ZbWKwL">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="https://www.tiktok.com/@rapatkansaf_?_t=8rpOpm3F7xq&_r=1">
+        <ion-icon name="logo-tiktok"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="https://pin.it/2Oaaey5oj">
+        <ion-icon name="logo-pinterest"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/rapatkansaf_/profilecard/?igsh=MWxzY3NsYzVwdjViMw==">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a></li>
+  </ul>
+  <ul class="menu">
+    <li class="menu__item"><a class="menu__link" href="https://mail.google.com/mail/u/0/?hl=en-GB#chats?compose=DmwnWrRlQHSZXhRXzRnjDVtJJLgGdSmSLHBJsSnhDpFlqlpXlDfjtdDFHGqWPHfxmSmDmdqscLpB">Email Me</a></li>
+    <li class="menu__item"><a class="menu__link" href="http://t.me/Safirahamira">Telegram Me</a></li>
+
+
+  </ul>
+  <p>&copy;2024 Safirah Amira | All Rights Reserved</p>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
 <script>
 filterSelection("all")
 function filterSelection(c) {
@@ -519,4 +705,5 @@ for (var i = 0; i < btns.length; i++) {
 
 </body>
 </html>
+
 
