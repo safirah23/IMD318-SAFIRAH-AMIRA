@@ -1,6 +1,9 @@
 /* Biodata css*/
 
-* 
+* {
+  box-sizing: border-box;
+}
+
   body {
     font-family: Arial, sans-serif;
     padding: 10px;
