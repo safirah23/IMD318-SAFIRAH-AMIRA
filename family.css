@@ -1,7 +1,11 @@
 
 /* Family css*/
 
-* 
+
+* {
+  box-sizing: border-box;
+}
+
   body {
     font-family: Arial, sans-serif;
     padding: 10px;
@@ -85,6 +89,21 @@
   .dropdown-content a:hover {background-color: #ddd;}
   
   .dropdown:hover .dropdown-content {display: block;}
+
+/* visited link */
+a:visited {
+  color: rgb(188, 11, 93);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(232, 98, 123);
+}
+
+/* selected link */
+a:active {
+  color: rgb(62, 65, 63);
+}
 
   .row {
     display: flex;
